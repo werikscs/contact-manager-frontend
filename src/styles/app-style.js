@@ -8,5 +8,5 @@ export const AppStyled = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.color.blue2_50};
+  background-color: ${({ theme }) => theme.color.bg_app};
 `;

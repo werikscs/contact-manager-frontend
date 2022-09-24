@@ -10,10 +10,10 @@ export const MessageRedirectStyled = styled.div`
 
     font-weight: bold;
 
-    color: ${({ theme }) => theme.color.blue1_75};
+    color: ${({ theme }) => theme.color.blue1};
 
     :hover {
-      color: ${({ theme }) => theme.color.orange1_dark};
+      color: ${({ theme }) => theme.color.blue1_50};
     }
   }
 `;

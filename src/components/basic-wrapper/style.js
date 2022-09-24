@@ -15,7 +15,7 @@ export const BasicWrapperStyled = styled.main`
 
   background-color: ${({ theme }) => theme.color.white1};
 
-  box-shadow: 0 0.25rem 0.5rem ${({ theme }) => theme.color.blue1};
+  box-shadow: 0 0.25rem 0.3rem ${({ theme }) => theme.color.blue1};
 
   h1 {
     padding: 1rem;
