@@ -15,7 +15,7 @@ export const theme = {
     black1_50: "rgba(41, 50, 65, .5)",
     black1_75: "rgba(41, 50, 65, .75)",
     white1: "#ffffff",
-    bg_app: "rgba(188, 222, 235, 1)",
+    bg_app: "#e0e0e0",
   },
   font: "Inter, sans-serif",
   border_radius: {
