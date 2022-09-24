@@ -19,7 +19,7 @@ export const LoginPage = () => {
         type="password"
         placeholder="Digite sua senha"
       />
-      <BasicButton text="Entrar" margin="1rem 0 0 0" />
+      <BasicButton text="Entrar" margin="1.25rem 0 0 0" />
       <BasicDivider />
       <MessageRedirect
         text="Não tem conta?"
