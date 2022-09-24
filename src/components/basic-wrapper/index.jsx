@@ -1,9 +1,13 @@
+import { basicWrapperMotion } from "../../utils/animations-variants";
 import { BasicWrapperStyled } from "./style";
 
 export const BasicWrapper = ({ children }) => {
   return (
-    <BasicWrapperStyled>
-      <div>{children}</div>
+    <BasicWrapperStyled
+      initial="initial"
+      animate="finalized"
+      variants={basicWrapperMotion}>
+      {children}
     </BasicWrapperStyled>
   );
 };

@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
 export const AppStyled = styled.div`
-  background-color: ${({ theme }) => theme.color.blue2_50};
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${({ theme }) => theme.color.bg_app};
 `;

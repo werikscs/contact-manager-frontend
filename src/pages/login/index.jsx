@@ -1,25 +1,41 @@
-import { BasicButton } from "../../components/basic-button";
 import { BasicDivider } from "../../components/basic-divider";
 import { BasicWrapper } from "../../components/basic-wrapper";
-import { BasicInput } from "../../components/basic-input";
 import { MessageRedirect } from "../../components/msg-redirect";
+import { BasicForm } from "../../components/basic-form";
+import { loginFormSchema } from "../../schemas/login";
+import { ToastifyMessage } from "../../utils/toastify-msgs";
 
 export const LoginPage = () => {
+  const loginPageComponents = [
+    {
+      label: "Email",
+      type: "text",
+      name: "email",
+      placeholder: "Digite um email válido",
+    },
+    {
+      label: "Senha",
+      type: "password",
+      name: "password",
+      placeholder: "Digite sua senha",
+    },
+  ];
+
+  const handleLogin = (data) => {
+    ToastifyMessage(false, "Email ou senha inválidos");
+  };
+
   return (
     <BasicWrapper>
       <h1>Entrar</h1>
       <BasicDivider />
-      <BasicInput
-        label="Email"
-        type="text"
-        placeholder="Digite um email válido"
+      <BasicForm
+        headerText="Entrar"
+        inputComponents={loginPageComponents}
+        schema={loginFormSchema}
+        submitButtonText="Entrar"
+        onSubmit={handleLogin}
       />
-      <BasicInput
-        label="Senha"
-        type="password"
-        placeholder="Digite sua senha"
-      />
-      <BasicButton text="Entrar" margin="1rem 0 0 0" />
       <BasicDivider />
       <MessageRedirect
         text="Não tem conta?"

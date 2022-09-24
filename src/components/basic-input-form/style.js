@@ -7,25 +7,37 @@ export const BasicInputStyled = styled.div`
   width: 100%;
 
   label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 
     padding-bottom: 0.2rem;
 
     text-indent: 1rem;
 
-    color: ${({ theme }) => theme.color.black1_75};
+    color: ${({ theme }) => theme.color.black1};
   }
 
   input {
     padding: 0.5rem 1rem;
 
     border-radius: ${({ theme }) => theme.border_radius.general};
-    outline: 1px solid ${({ theme }) => theme.color.black1};
+    outline: 2px solid ${({ theme }) => theme.color.black1_50};
 
     font-size: 0.9rem;
   }
 
   input:focus {
-    outline: 1px solid ${({ theme }) => theme.color.orange1};
+    outline: 2px solid ${({ theme }) => theme.color.blue2_75};
+  }
+
+  span {
+    font-size: 0.9rem;
+
+    font-style: italic;
+
+    padding-top: 0.2rem;
+
+    text-indent: 1rem;
+
+    color: ${({ theme }) => theme.color.orange1_dark};
   }
 `;
