@@ -23,6 +23,12 @@ export const BasicInputStyled = styled.div`
     outline: 2px solid ${({ theme }) => theme.color.black1_50};
 
     font-size: 0.9rem;
+
+    ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 
   input:focus {
