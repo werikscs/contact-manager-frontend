@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     outline: 0;
     border: 0;
     list-style: none;
+    font-family: ${({ theme }) => theme.font};
 }
 
 button{
