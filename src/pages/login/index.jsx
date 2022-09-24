@@ -3,6 +3,7 @@ import { BasicWrapper } from "../../components/basic-wrapper";
 import { MessageRedirect } from "../../components/msg-redirect";
 import { BasicForm } from "../../components/basic-form";
 import { loginFormSchema } from "../../schemas/login";
+import { ToastifyMessage } from "../../utils/toastify-msgs";
 
 export const LoginPage = () => {
   const loginPageComponents = [
@@ -21,7 +22,7 @@ export const LoginPage = () => {
   ];
 
   const handleLogin = (data) => {
-    console.log(data);
+    ToastifyMessage(false, "Email ou senha inválidos");
   };
 
   return (
