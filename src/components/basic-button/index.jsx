@@ -1,5 +1,5 @@
 import { BasicButtonStyled } from "./style";
 
-export const BasicButton = ({ ...rest }) => {
-  return <BasicButtonStyled {...rest}>Entrar</BasicButtonStyled>;
+export const BasicButton = ({ text }, { ...rest }) => {
+  return <BasicButtonStyled {...rest}>{text}</BasicButtonStyled>;
 };

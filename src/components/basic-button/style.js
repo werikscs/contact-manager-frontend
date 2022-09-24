@@ -6,7 +6,7 @@ export const BasicButtonStyled = styled.button`
   padding: 0.5rem 1rem;
 
   border-radius: ${({ theme }) => theme.border_radius.general};
-  border: 2px solid ${({ theme }) => theme.color.black1};
+  border: 1px solid ${({ theme }) => theme.color.black1};
 
   font-size: 1rem;
   font-weight: bold;
@@ -17,7 +17,8 @@ export const BasicButtonStyled = styled.button`
   margin: ${(props) => props.margin || "unset"};
 
   :hover {
-    color: ${({ theme }) => theme.color.black1};
-    background-color: ${({ theme }) => theme.color.white1};
+    border: 1px solid ${({ theme }) => theme.color.orange1};
+
+    background-color: ${({ theme }) => theme.color.orange1};
   }
 `;
