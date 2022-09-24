@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const AppStyled = styled.div`
-  background-color: ${({ theme }) => theme.color.white1};
+  background-color: ${({ theme }) => theme.color.blue2_50};
 `;

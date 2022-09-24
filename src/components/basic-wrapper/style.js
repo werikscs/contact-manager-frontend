@@ -20,7 +20,7 @@ export const BasicWrapperStyled = styled.main`
 
     gap: 1rem;
 
-    background-color: ${({ theme }) => theme.color.blue2};
+    background-color: ${({ theme }) => theme.color.white1};
 
     min-width: 360px;
     max-width: 400px;

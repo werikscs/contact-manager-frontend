@@ -15,7 +15,4 @@ export const GlobalStyle = createGlobalStyle`
 button{
     cursor: pointer;
 }
-button:hover{
-    filter: brightness(90%);
-}
 `;
