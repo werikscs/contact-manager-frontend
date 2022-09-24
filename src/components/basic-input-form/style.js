@@ -28,4 +28,16 @@ export const BasicInputStyled = styled.div`
   input:focus {
     outline: 1px solid ${({ theme }) => theme.color.orange1};
   }
+
+  span {
+    font-size: 0.9rem;
+
+    font-style: italic;
+
+    padding-top: 0.2rem;
+
+    text-indent: 1rem;
+
+    color: ${({ theme }) => theme.color.orange1_dark};
+  }
 `;
