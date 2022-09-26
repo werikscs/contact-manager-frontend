@@ -1,35 +1,28 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const BasicWrapperStyled = styled.main`
+export const BasicWrapperStyled = styled(motion.main)`
   margin: 0 auto;
 
+  padding: 0 1rem 1rem 1rem;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
+  width: 100%;
+  min-width: ${({ theme }) => theme.size.minWidth};
+  max-width: ${({ theme }) => theme.size.maxWidth};
+
+  border-radius: ${({ theme }) => theme.borderRadius.general};
+
+  background-color: ${({ theme }) => theme.color.white1};
+
+  box-shadow: 0 0.1rem 0.25rem ${({ theme }) => theme.color.blue1_75};
 
   h1 {
-    color: ${({ theme }) => theme.color.black1};
-  }
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 1rem;
-
-    background-color: ${({ theme }) => theme.color.white1};
-
-    min-width: 360px;
-    max-width: 400px;
-    height: fit-content;
-
-    border-radius: 0.5rem;
-
-    box-shadow: 0 0.25rem 0.5rem ${({ theme }) => theme.color.blue1};
-
-    padding: 1.5rem 1rem;
+    font-size: 1.6rem;
+    padding: 1rem;
   }
 `;
