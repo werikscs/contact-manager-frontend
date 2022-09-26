@@ -8,6 +8,7 @@ export const BasicFormStyled = styled.form`
   gap: 1rem;
 
   width: 100%;
+  max-width: 400px;
 
   padding: 1.5rem 1rem;
 `;

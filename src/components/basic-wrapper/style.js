@@ -9,16 +9,18 @@ export const BasicWrapperStyled = styled(motion.main)`
   justify-content: center;
   align-items: center;
 
-  min-width: 360px;
-  max-width: 400px;
+  width: 100%;
+  min-width: ${({ theme }) => theme.size.minWidth};
+  max-width: ${({ theme }) => theme.size.maxWidth};
 
-  border-radius: 1rem;
+  border-radius: ${({ theme }) => theme.borderRadius.general};
 
   background-color: ${({ theme }) => theme.color.white1};
 
-  box-shadow: 0 0.2rem 0.25rem ${({ theme }) => theme.color.blue1_75};
+  box-shadow: 0 0.1rem 0.25rem ${({ theme }) => theme.color.blue1_75};
 
   h1 {
+    font-size: 1.6rem;
     padding: 1rem;
   }
 `;

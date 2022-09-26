@@ -32,6 +32,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 }
 
+#root {
+    display: flex;
+    justify-content: center;
+    background-color: ${({ theme }) => theme.color.bg_app};
+}
+
 button{
     cursor: pointer;
 }

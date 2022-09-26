@@ -3,26 +3,16 @@ import { BasicWrapper } from "../../components/basic-wrapper";
 import { MessageRedirect } from "../../components/msg-redirect";
 import { BasicForm } from "../../components/basic-form";
 import { loginFormSchema } from "../../schemas/login";
-import { ToastifyMessage } from "../../utils/toastify-msgs";
+import { ToastifyMessages } from "../../utils/toastify-msgs";
+import { clientAPI } from "../../api";
+import { formInputs } from "../../utils/form-inputs";
 
 export const LoginPage = () => {
-  const loginPageComponents = [
-    {
-      label: "Email",
-      type: "text",
-      name: "email",
-      placeholder: "Digite um email válido",
-    },
-    {
-      label: "Senha",
-      type: "password",
-      name: "password",
-      placeholder: "Digite sua senha",
-    },
-  ];
+  const loginPageComponents = [formInputs.email, formInputs.password];
 
   const handleLogin = (data) => {
-    ToastifyMessage(false, "Email ou senha inválidos");
+    const res = clientAPI.POST.loginClient(data.email, data.password);
+    ToastifyMessages.loginMsg(res);
   };
 
   return (
