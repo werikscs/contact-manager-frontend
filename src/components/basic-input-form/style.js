@@ -19,7 +19,7 @@ export const BasicInputStyled = styled.div`
   input {
     padding: 0.5rem 1rem;
 
-    border-radius: ${({ theme }) => theme.border_radius.general};
+    border-radius: ${({ theme }) => theme.borderRadius.general};
     outline: 2px solid ${({ theme }) => theme.color.black1_50};
 
     font-size: 0.9rem;

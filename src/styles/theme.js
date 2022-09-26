@@ -18,7 +18,26 @@ export const theme = {
     bg_app: "#e0e0e0",
   },
   font: "Inter, sans-serif",
-  border_radius: {
+  borderRadius: {
     general: "1rem",
+  },
+  size: {
+    width: "inherit",
+    minWidth: "360px",
+    maxWidth: "400px",
+    minWidthDivider: "360px",
+    maxWidthDivider: "400px",
+  },
+};
+
+export const themeMainPages = {
+  borderRadius: {
+    general: "0 0 0.5rem 0.5rem",
+  },
+  size: {
+    width: "100%",
+    maxWidth: "100%",
+    minWidthDivider: theme.size.minWidth,
+    maxWidthDivider: theme.size.maxWidth,
   },
 };

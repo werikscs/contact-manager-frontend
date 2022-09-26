@@ -9,15 +9,17 @@ export const BasicInputForm = ({
   err = {},
 }) => {
   return (
-    <BasicInputStyled>
-      <label>{label}</label>
-      <input
-        type={type}
-        name={name}
-        placeholder={placeholder}
-        {...register(name)}
-      />
-      {err[name] && <span>{err[name].message}</span>}
-    </BasicInputStyled>
+    <>
+      <BasicInputStyled>
+        <label>{label}</label>
+        <input
+          type={type}
+          name={name}
+          placeholder={placeholder}
+          {...register(name)}
+        />
+        {err[name] && <span>{err[name].message}</span>}
+      </BasicInputStyled>
+    </>
   );
 };
