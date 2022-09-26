@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import { contactsAPI } from "../../api";
 import { BasicDivider } from "../../components/basic-divider";
 import { BasicForm } from "../../components/basic-form";
 import { BasicWrapper } from "../../components/basic-wrapper";
@@ -15,7 +16,7 @@ export const CreateContactPage = () => {
   ];
 
   const handleCreateContact = (data) => {
-    console.log(data);
+    contactsAPI.POST.createContacts(data);
   };
 
   return (
