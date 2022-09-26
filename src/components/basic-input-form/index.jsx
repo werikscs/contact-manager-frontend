@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { BasicInputStyled } from "./style";
 
 export const BasicInputForm = ({
@@ -5,9 +6,12 @@ export const BasicInputForm = ({
   type,
   name,
   placeholder,
+  text = "",
   register,
   err = {},
 }) => {
+  const ref = useRef(null);
+
   return (
     <>
       <BasicInputStyled>
@@ -16,6 +20,8 @@ export const BasicInputForm = ({
           type={type}
           name={name}
           placeholder={placeholder}
+          ref={ref}
+          defaultValue={text}
           {...register(name)}
         />
         {err[name] && <span>{err[name].message}</span>}
