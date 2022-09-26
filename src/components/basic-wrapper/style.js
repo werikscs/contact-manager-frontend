@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const BasicWrapperStyled = styled(motion.main)`
   margin: 0 auto;
 
+  padding: 0 1rem 1rem 1rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
