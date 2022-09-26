@@ -26,6 +26,26 @@ const contactsArray = [
     lastname: "pereira",
     phone: "22911111111",
   },
+  {
+    name: "zezim",
+    lastname: "generic",
+    phone: "22911111111",
+  },
+  {
+    name: "mariazin",
+    lastname: "pereira",
+    phone: "22911111111",
+  },
+  {
+    name: "zezim",
+    lastname: "generic",
+    phone: "22911111111",
+  },
+  {
+    name: "mariazin",
+    lastname: "pereira",
+    phone: "22911111111",
+  },
 ];
 
 const login = (email, password) => {
