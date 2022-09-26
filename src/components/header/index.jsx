@@ -1,4 +1,6 @@
 import { basicWrapperMotion } from "../../utils/animations-variants";
+import { MenuButton } from "../menu-button";
+
 import { HeaderStyled } from "./style";
 
 export const Header = () => {
@@ -8,11 +10,11 @@ export const Header = () => {
       animate="finalized"
       variants={basicWrapperMotion}>
       <h1>Contatinhos</h1>
-      <button>Perfil</button>
-      <button>Criar Contatinho</button>
-      <button>Ver Contatinhos</button>
-      <button>Relatório</button>
-      <button>Sair</button>
+      <MenuButton pathText="Perfil" />
+      <MenuButton pathText="Criar Contatinho" />
+      <MenuButton pathText="Ver Contatinhos" />
+      <MenuButton pathText="Relatório" />
+      <MenuButton path="/" pathText="Sair" />
     </HeaderStyled>
   );
 };
