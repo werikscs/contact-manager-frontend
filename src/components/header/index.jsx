@@ -11,8 +11,8 @@ export const Header = () => {
       variants={basicWrapperMotion}>
       <h1>Contatinhos</h1>
       <MenuButton pathText="Perfil" />
-      <MenuButton pathText="Criar Contatinho" />
-      <MenuButton pathText="Ver Contatinhos" />
+      <MenuButton path="/create-contact" pathText="Criar Contatinho" />
+      <MenuButton path="/contacts" pathText="Ver Contatinhos" />
       <MenuButton pathText="Relatório" />
       <MenuButton path="/" pathText="Sair" />
     </HeaderStyled>
