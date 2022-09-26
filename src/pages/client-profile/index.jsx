@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { clientAPI } from "../../api";
+import { clientAPI, contactsAPI } from "../../api";
 import { BasicDivider } from "../../components/basic-divider";
 import { BasicForm } from "../../components/basic-form";
 import { BasicWrapper } from "../../components/basic-wrapper";
@@ -12,17 +13,22 @@ import { formInputs } from "../../utils/form-inputs";
 export const ClientProfilePage = () => {
   const [clientData, setClientData] = useState([]);
 
+  const { state } = useLocation();
+
+  const clientEmail = "werikscs@email.com";
+
   useEffect(() => {
-    const data = clientAPI.GET.byEmail("werikscs@email.com");
+    // window.location.reload();
+    const data = state
+      ? contactsAPI.GET.byId(state?.contactID)
+      : clientAPI.GET.byEmail(clientEmail);
 
     setClientData([
       { ...formInputs.name, text: data.name },
       { ...formInputs.lastname, text: data.lastname },
       { ...formInputs.phone, text: data.phone },
     ]);
-  }, []);
-
-  // console.log(clientProfilePage);
+  }, [state]);
 
   const handleClientProfile = (data) => {
     console.log(data);
@@ -32,7 +38,7 @@ export const ClientProfilePage = () => {
     <ThemeProvider theme={themeMainPages}>
       <Header />
       <BasicWrapper>
-        <h1>Meu Perfil</h1>
+        {state?.contactID ? <h1>Editar contato</h1> : <h1>Meu Perfil</h1>}
         <BasicDivider />
         {clientData && (
           <BasicForm

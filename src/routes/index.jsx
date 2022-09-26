@@ -12,7 +12,7 @@ const AppRoutes = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/create-contact" element={<CreateContactPage />} />
       <Route path="/contacts" element={<ShowContactsPage />} />
-      <Route path="/my-profile" element={<ClientProfilePage />} />
+      <Route path="/profile" element={<ClientProfilePage />} />
     </Routes>
   );
 };
