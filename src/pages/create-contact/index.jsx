@@ -5,27 +5,13 @@ import { BasicWrapper } from "../../components/basic-wrapper";
 import { Header } from "../../components/header";
 import { createContactFormSchema } from "../../schemas/create-contact";
 import { themeMainPages } from "../../styles/theme";
+import { formInputs } from "../../utils/form-inputs";
 
 export const CreateContactPage = () => {
   const createContactPageComponents = [
-    {
-      label: "Nome",
-      type: "text",
-      name: "name",
-      placeholder: "Digite seu nome",
-    },
-    {
-      label: "Sobrenome",
-      type: "text",
-      name: "lastname",
-      placeholder: "Digite seu sobrenome",
-    },
-    {
-      label: "Telefone",
-      type: "number",
-      name: "phone",
-      placeholder: "Digite um telefone",
-    },
+    formInputs.name,
+    formInputs.lastname,
+    formInputs.phone,
   ];
 
   const handleCreateContact = (data) => {
