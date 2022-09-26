@@ -22,8 +22,6 @@ export const ClientProfilePage = () => {
     ]);
   }, []);
 
-  // console.log(clientProfilePage);
-
   const handleClientProfile = (data) => {
     console.log(data);
   };
