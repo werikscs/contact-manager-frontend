@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { ClientProfilePage } from "../pages/client-profile";
 import { CreateContactPage } from "../pages/create-contact";
 import { LoginPage } from "../pages/login";
 import { RegisterPage } from "../pages/register";
@@ -11,6 +12,7 @@ const AppRoutes = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/create-contact" element={<CreateContactPage />} />
       <Route path="/contacts" element={<ShowContactsPage />} />
+      <Route path="/my-profile" element={<ClientProfilePage />} />
     </Routes>
   );
 };

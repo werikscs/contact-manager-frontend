@@ -10,7 +10,7 @@ export const Header = () => {
       animate="finalized"
       variants={basicWrapperMotion}>
       <h1>Contatinhos</h1>
-      <MenuButton pathText="Perfil" />
+      <MenuButton path="/my-profile" pathText="Perfil" />
       <MenuButton path="/create-contact" pathText="Criar Contatinho" />
       <MenuButton path="/contacts" pathText="Ver Contatinhos" />
       <MenuButton pathText="Relatório" />
