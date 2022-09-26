@@ -15,38 +15,7 @@ const clientsArray = [
   },
 ];
 
-const contactsArray = [
-  {
-    name: "zezim",
-    lastname: "generic",
-    phone: "22911111111",
-  },
-  {
-    name: "mariazin",
-    lastname: "pereira",
-    phone: "22911111111",
-  },
-  {
-    name: "zezim",
-    lastname: "generic",
-    phone: "22911111111",
-  },
-  {
-    name: "mariazin",
-    lastname: "pereira",
-    phone: "22911111111",
-  },
-  {
-    name: "zezim",
-    lastname: "generic",
-    phone: "22911111111",
-  },
-  {
-    name: "mariazin",
-    lastname: "pereira",
-    phone: "22911111111",
-  },
-];
+let contactsArray = [];
 
 const login = (email, password) => {
   return clientsArray.find(
@@ -74,16 +43,39 @@ export const clientAPI = {
 //PATCH - edit client
 
 const createContact = (newContact) => {
-  contactsArray.push(newContact);
+  let lastID = contactsArray.length ? contactsArray[0].id : 0;
+
+  for (let i = 1; i < contactsArray.length; i++) {
+    if (contactsArray[i].id > lastID) {
+      lastID = contactsArray[i].id;
+    }
+  }
+
+  lastID++;
+
+  contactsArray.push({ ...newContact, id: lastID });
+};
+
+const contactById = (id) => {
+  return contactsArray.find((contact) => contact.id === id);
+};
+
+const deleteContactById = (id) => {
+  contactsArray = contactsArray.filter((contact) => contact.id !== id);
+  return contactsArray;
 };
 
 //contacts
 export const contactsAPI = {
   GET: {
     allContacts: contactsArray,
+    byId: contactById,
   },
   POST: {
     createContacts: createContact,
+  },
+  DELETE: {
+    byId: deleteContactById,
   },
 };
 //POST - create contact
