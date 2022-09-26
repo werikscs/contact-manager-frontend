@@ -54,10 +54,15 @@ const login = (email, password) => {
   );
 };
 
+const clientByEmail = (email) => {
+  return clientsArray.find((client) => client.email === email);
+};
+
 //client
 export const clientAPI = {
   GET: {
     allClients: clientsArray,
+    byEmail: clientByEmail,
   },
   POST: {
     loginClient: login,
