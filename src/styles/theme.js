@@ -9,6 +9,7 @@ export const theme = {
     blue2_50: "rgba(152, 193, 217, 0.5)",
     blue2_75: "rgba(152, 193, 217, 0.75)",
     blue3: "#E0FBFC",
+    blue4: "#E9F0F2",
     orange1: "#EE6C4D",
     orange1_dark: "rgb(234, 72, 31)",
     black1: "#293241",
