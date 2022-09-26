@@ -32,6 +32,7 @@ export const BasicForm = ({
               placeholder={input.placeholder}
               register={register}
               err={errors}
+              text={input.text || ""}
             />
           ))}
         </>
