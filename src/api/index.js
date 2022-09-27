@@ -1,19 +1,4 @@
-const clientsArray = [
-  {
-    name: "weriks",
-    lastname: "santos",
-    email: "werikscs@email.com",
-    phone: "22998026411",
-    password: "12345678",
-  },
-  {
-    name: "zezim",
-    lastname: "pereira",
-    email: "zezim@email.com",
-    phone: "22911111111",
-    password: "12345678",
-  },
-];
+const clientsArray = [];
 
 let contactsArray = [];
 
@@ -21,6 +6,10 @@ const login = (email, password) => {
   return clientsArray.find(
     (client) => client.email === email && client.password === password
   );
+};
+
+const createClient = (data) => {
+  clientsArray.push(data);
 };
 
 const clientByEmail = (email) => {
@@ -34,6 +23,7 @@ export const clientAPI = {
     byEmail: clientByEmail,
   },
   POST: {
+    createClient: createClient,
     loginClient: login,
   },
 };

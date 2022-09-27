@@ -15,7 +15,7 @@ export const ClientProfilePage = () => {
 
   const { state } = useLocation();
 
-  const clientEmail = "werikscs@email.com";
+  const clientEmail = sessionStorage.getItem("@email");
 
   useEffect(() => {
     // window.location.reload();

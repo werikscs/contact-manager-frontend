@@ -4,6 +4,9 @@ import { MenuButton } from "../menu-button";
 import { HeaderStyled } from "./style";
 
 export const Header = () => {
+  const logout = () => {
+    sessionStorage.clear();
+  };
   return (
     <HeaderStyled
       initial="initial"
@@ -13,7 +16,7 @@ export const Header = () => {
       <MenuButton path="/profile" pathText="Perfil" />
       <MenuButton path="/create-contact" pathText="Criar Contatinho" />
       <MenuButton path="/contacts" pathText="Ver Contatinhos" />
-      <MenuButton path="/" pathText="Sair" />
+      <MenuButton callback={logout} path="/" pathText="Sair" />
     </HeaderStyled>
   );
 };
